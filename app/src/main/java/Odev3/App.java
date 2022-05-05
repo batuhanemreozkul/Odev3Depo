@@ -10,9 +10,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 import static spark.Spark.get;
 import static spark.Spark.post;
 
-/* import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
- */
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -22,9 +20,6 @@ public class App {
         System.out.println(new App().getGreeting());
 
         
-        get("/", (req, res) -> "Hello, World");
-
-
         post("/compute", (req, res) -> {
            
             String input1 = req.queryParams("input1"); //complate.mustache kısmında textarea kısmına yazlığımız inputlar buraya geliyor
@@ -102,5 +97,5 @@ public class App {
         return true;
         
     }
-   
+
 }

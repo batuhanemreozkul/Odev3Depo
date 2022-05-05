@@ -45,12 +45,13 @@ class AppTest {
     public void palindrom_sayi(){
         ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1221,2332,5445));
         assertTrue(App.palindrom(array, 1221));
+        
     }
 
     @Test
     public void palindrom_degil(){
 
-        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1221,2332,5445));
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1341,2314,4524));
         assertFalse(App.palindrom(array,4562));
 
     }
