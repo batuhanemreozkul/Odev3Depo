@@ -12,18 +12,24 @@ import spark.template.mustache.MustacheTemplateEngine;
 import static spark.Spark.get;
 import static spark.Spark.post;
 import static spark.Spark.port;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    //get("/", (req, res) -> "Hello, World");
+    
 
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        Logger logger = LogManager.getLogger(App.class);
+        logger.error("hello world");
+
+        get("/", (req, res) -> "Hello, World");
 
         get("/compute",
         (rq, rs) -> {
