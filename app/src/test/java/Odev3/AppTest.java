@@ -16,7 +16,7 @@ class AppTest {
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
 
-    @Test 
+    /* @Test 
     public void testFound(){
         //Girilen Eleman arrayde mevcut. Bu fonksiyondan true dönmeli
         ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1,2,3,4));
@@ -25,7 +25,7 @@ class AppTest {
 
     @Test 
     public void testNotFound(){
-        //Girilen Eleman arrayde mevcut. Bu fonksiyondan false dönmeli
+        //Girilen Eleman arrayde mevcut degil. Bu fonksiyondan false dönmeli
         ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1,2,3,4));
         assertFalse(App.search(array, 5));
     }
@@ -39,5 +39,19 @@ class AppTest {
     @Test void testNull(){
         assertFalse(App.search(null, 1));
         
+    } */
+
+    @Test 
+    public void palindrom_sayi(){
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1221,2332,5445));
+        assertTrue(App.palindrom(array, 1221));
+    }
+
+    @Test
+    public void palindrom_degil(){
+
+        ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1221,2332,5445));
+        assertFalse(App.palindrom(array,4562));
+
     }
 }
